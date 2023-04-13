@@ -8,4 +8,4 @@
 # except Exception as err:
 #     print(err)
 import os
-print(os.curdir())
+print(os.curdir)
