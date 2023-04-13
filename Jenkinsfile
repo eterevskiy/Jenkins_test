@@ -10,15 +10,8 @@ pipeline {
       steps {
         sh 'echo "hello world"'
         sh 'python3 --version'
-        sh 'pip list'
         sh 'source myenv/bin/activate  '
-      }
-    }
-
-    stage('Test') {
-      steps {
-        sh 'echo "Working..."'
-        sh 'python3 test1.py'
+        sh 'pip list'
       }
     }
 
