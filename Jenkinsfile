@@ -7,12 +7,12 @@ pipeline {
         sh 'python3 --version'
         sh 'pip list'
         sh 'pwd'
+        sh 'source myenv/bin/activate'
       }
     }
 
     stage('Test') {
       steps {
-        sh 'source myenv/bin/activate'
         sh 'python3 test1.py'
       }
     }
