@@ -1,7 +1,7 @@
 from selenium import webdriver
 import os 
 import time
-driver = webdriver.Chrome(executable_path="chromedriver")
+driver = webdriver.Chrome(executable_path=os.path.join(os.getcwd,'chromedriver'))
 try :
     driver.get('https://www.google.com/')
     time.sleep(3)
