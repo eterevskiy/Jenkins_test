@@ -7,9 +7,20 @@ pipeline {
   }
   stages {
     stage('Init') {
-      steps {
-        sh 'echo "hello world"'
-        sh 'python3 --version'
+      parallel {
+        stage('Init') {
+          steps {
+            sh 'echo "hello world"'
+            sh 'python3 --version'
+          }
+        }
+
+        stage('') {
+          steps {
+            sh 'source myenv/bin/activate '
+          }
+        }
+
       }
     }
 
