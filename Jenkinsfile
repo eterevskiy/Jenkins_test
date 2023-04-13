@@ -15,9 +15,10 @@ pipeline {
           }
         }
 
-        stage('') {
+        stage('Enviroment') {
           steps {
             sh 'source myenv/bin/activate '
+            sh 'pip install selenium'
           }
         }
 
