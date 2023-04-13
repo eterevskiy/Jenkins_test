@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 import os 
 import time
-chrome_path = '/usr/bin/google-chrome'
+chrome_path = '/usr/bin/google-chrome-stable'
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-shm-usage')
