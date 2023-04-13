@@ -7,7 +7,8 @@ pipeline {
         sh 'python3 --version'
         sh 'pip list'
         sh 'pwd'
-        sh 'ls'
+        sh '''. myenv/bin/activate
+'''
       }
     }
 
