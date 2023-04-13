@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    node {
-      label 'docker-python'
-    }
-
-  }
+  agent any
   stages {
     stage('Init') {
       steps {
@@ -17,6 +12,7 @@ pipeline {
 
     stage('Test') {
       steps {
+        sh 'source myenv/bin/activate'
         sh 'python3 test1.py'
       }
     }
