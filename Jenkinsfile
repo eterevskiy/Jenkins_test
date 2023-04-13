@@ -1,12 +1,13 @@
 pipeline {
-  agent {
-    node {
-      label 'docker-python'
-    }
-
-  }
+  agent none
   stages {
     stage('Init') {
+      agent {
+        docker {
+          image 'python:buster'
+        }
+
+      }
       steps {
         sh 'echo "hello world"'
         sh 'python3 --version'
