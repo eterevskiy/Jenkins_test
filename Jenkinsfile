@@ -7,7 +7,7 @@ pipeline {
         sh 'python3 --version'
         sh 'pip list'
         sh 'pwd'
-        sh '''. myenv/bin/activate
+        sh '''pip install selenium
 '''
       }
     }
