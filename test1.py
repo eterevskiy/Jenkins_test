@@ -7,6 +7,9 @@ chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-shm-usage')
 service = Service(executable_path=os.path.join(os.getcwd(),'chromedriver'))
+service = Service(chrome_path)
+service.start()
+
 driver = webdriver.Chrome(service=service, options=chrome_options,executable_path=chrome_path)
 try :
     driver.get('https://www.google.com/')
