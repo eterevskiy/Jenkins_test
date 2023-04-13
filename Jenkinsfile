@@ -7,21 +7,10 @@ pipeline {
   }
   stages {
     stage('Init') {
-      parallel {
-        stage('Init') {
-          steps {
-            sh 'echo "hello world"'
-            sh 'python3 --version'
-          }
-        }
-
-        stage('Enviroment') {
-          steps {
-            sh 'source myenv/bin/activate '
-            sh 'pip install selenium'
-          }
-        }
-
+      steps {
+        sh 'echo "hello world"'
+        sh 'python3 --version'
+        sh 'source myenv/bin/activate  '
       }
     }
 
